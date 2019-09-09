@@ -53,14 +53,14 @@ class World ():
                 a2.move(mm*coeff*f1, deltat)
 
     def move_all(self, animated_list, deltat):
-        viscosity = .001
+        viscosity = .002
         for man in animated_list:
             f_visc = - viscosity*man.velocity *man.mass
             man.move(f_visc, deltat)
         self.draw_move_all(animated_list, deltat)
     
     def draw_circle(self, animated):
-        r = 10
+        r = animated.radius
         x0 = animated.position[0]*10 - r
         y0 = animated.position[1]*10 - r
         x1 = animated.position[0]*10 + r

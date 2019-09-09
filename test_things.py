@@ -19,9 +19,12 @@ def main():
     world = World(height, width, canvasName=myCanvas)
     list_of_animated = []
 
-    for i in range(50):
-        list_of_animated.append(animated(position= numpy.random.uniform(0, 50, 2) ,mass= 10, color="red"))
-    list_of_animated.append(animated(position= numpy.random.uniform(0, 50, 2) ,mass= 7, color="blue"))
+    for i in range(20):
+        list_of_animated.append(red_ball(position= numpy.random.uniform(0, 50, 2)))
+        list_of_animated.append(yellow_ball(position= numpy.random.uniform(0, 50, 2)))
+        list_of_animated.append(green_ball(position= numpy.random.uniform(0, 50, 2)))
+        list_of_animated.append(blue_ball(position= numpy.random.uniform(0, 50, 2) ))
+        list_of_animated.append(black_ball(position= numpy.random.uniform(0, 50, 2) ))
         #list_of_animated.append(animated(position= [23,14],mass= 5, canvasName=myCanvas))
 
     world.draw_all(list_of_animated)

@@ -7,6 +7,7 @@ class animated():
     health = None
     color = "red"
     shape_name = None
+    radius = 1
 
     def __init__(self, position, mass, color):
         self.position = position
@@ -54,3 +55,43 @@ class animated():
         #self.draw_movement((new_x-x)*10, (new_y - y)*10)
     
        
+class yellow_ball(animated):
+    def __init__(self, position):
+        self.position = position
+        self.mass = 12
+        self.color = "yellow"
+        self.radius = self.mass
+        self.spawn(self.position)
+
+class red_ball(animated):
+    def __init__(self, position):
+        self.position = position
+        self.mass = 10
+        self.color = "red"
+        self.radius = self.mass
+        self.spawn(self.position)
+
+class blue_ball(animated):
+    def __init__(self, position):
+        self.position = position
+        self.mass = 5
+        self.color = "blue"
+        self.radius = self.mass
+        self.spawn(self.position)
+
+class green_ball(animated):
+    def __init__(self, position):
+        self.position = position
+        self.mass = 20
+        self.color = "green"
+        self.radius = self.mass
+        self.spawn(self.position)
+
+class black_ball(animated):
+    def __init__(self, position):
+        self.position = position
+        self.mass = 5
+        self.color = "black"
+        self.radius = 11
+        self.spawn(self.position)
+
