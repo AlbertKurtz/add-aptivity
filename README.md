@@ -7,4 +7,5 @@ This is a small exercise that I did to learn a little bit of classes and OOP.
 
 All comments/critics/suggestions are more than welcome! 
 
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/6939464/65239315-07817e80-dadf-11e9-98b9-6542c154045a.gif)
+![ezgif com-video-to-gif(1)](https://user-images.githubusercontent.com/6939464/65239459-53ccbe80-dadf-11e9-9384-283e251d469e.gif)
+
