@@ -16,6 +16,7 @@ class World ():
     def grid_position(self, animated):
         return round(animated.position[0],4), round(animated.position[1],4)
     
+    # bouncing force on hitting box border
     def animated_on_border(self, animated):
         x, y = self.grid_position(animated) 
         if  x <= 0:
@@ -38,7 +39,9 @@ class World ():
     def distance(self, animated1, animated2):
         return numpy.sqrt((animated1.position[0] - animated2.position[0])**2 
         + (animated1.position[1] - animated2.position[1])**2)
-
+	
+	#collision is managed by world, even if it should be a method of animated
+	# interaction is Coulomb-like within a cutoff radius
     def collisions(self, animated_list, deltat):
         for a1, a2 in itertools.combinations(animated_list, 2):
             x1, y1 = a1.position
@@ -51,7 +54,8 @@ class World ():
                 f2 = numpy.array([(x2-x1)*1/(dist**2 + 0.01), (y2-y1)*1/(dist**2 + 0.01)])
                 a1.move(mm*coeff*f2, deltat)
                 a2.move(mm*coeff*f1, deltat)
-
+	
+	#method that updated movement
     def move_all(self, animated_list, deltat):
         viscosity = .002
         for man in animated_list:
@@ -59,6 +63,7 @@ class World ():
             man.move(f_visc, deltat)
         self.draw_move_all(animated_list, deltat)
     
+    #methods to draw animated on canvas
     def draw_circle(self, animated):
         r = animated.radius
         x0 = animated.position[0]*10 - r
