@@ -1,7 +1,24 @@
+"""
+
+Usage:
+  add_aptivity.py
+Options:
+  -h, --help    Show this screen.
+  --version     Show version.
+"""
+
+__author__ = 'Alberto Flor'
+__credits__ = ['Alberto Flor']
+__license__ = 'GPL3+'
+__version__ = '0.0.1'
+__maintainer__ = 'Alberto Flor'
+__email__ = 'albert.flor.mail@gmail.com'
+__status__ = 'Development'
+
 import time, numpy
 import tkinter as tk 
-from animated import *
-from world import *
+from classes.animated import *
+from classes.world import *
 
 
 def main():
